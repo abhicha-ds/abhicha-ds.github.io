@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <script>
+    // This script retrieves the query parameters (code, state) from the URL
+    // and redirects to the custom scheme of the app.
+    // Host this file on an HTTPS server (e.g., GitHub Pages, Vercel, Netlify).
+    // Register this URL (https://your-domain.com/callback.html) as the Redirect URI in Threads/Meta Developer Portal.
+
+    window.onload = function() {
+      const params = window.location.search;
+      // The custom scheme for the app
+      const appScheme = "x-amplifier://threads-auth";
+      // Redirect
+      window.location.href = appScheme + params;
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting to X-Amplifier...</p>
+  <p>If nothing happens, <a href="#" onclick="window.onload()">click here</a>.</p>
+</body>
+</html>
